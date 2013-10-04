@@ -3,3 +3,5 @@ build
 DerivedData
 tmp
 out.log
+BugSplat.xcodeproj
+BugSplat
