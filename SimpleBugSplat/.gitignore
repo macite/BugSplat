@@ -1,0 +1,7 @@
+bin
+build
+DerivedData
+SimpleBugSplat
+*.xcodeproj
+tmp
+out.log

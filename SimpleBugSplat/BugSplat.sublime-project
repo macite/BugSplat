@@ -1,0 +1,18 @@
+{
+	"folders":
+	[
+		{
+			"path": ".",
+			"folder_exclude_patterns": ["bin", "build", "DerivedData", "tmp", "*.xcodeproj", "SimpleBugSplat", "lib", "tools"],
+			"file_exclude_patterns": ["*.sublime*"]
+		}
+	],
+	"build_systems":
+    [
+        {
+            "name": "Bash",
+            "cmd": ["bash", "$file"],
+            "selector": "source.shell"
+        }
+    ]
+}

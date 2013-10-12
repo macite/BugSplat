@@ -1,0 +1,25 @@
+program GameMain;
+uses SwinGame, sgTypes, SysUtils;
+
+procedure Main();
+begin
+  OpenAudio();
+  
+  OpenGraphicsWindow('Bug Splat', 1024, 768);
+  LoadDefaultColors();
+  ShowSwinGameSplashScreen();
+
+  LoadResourceBundle('BugSplat.txt');
+
+  DrawBitmap('Background1', 0, 0);
+  RefreshScreen();
+
+  Delay(5000);
+    
+  CloseAudio();
+  ReleaseAllResources();
+end;
+
+begin
+  Main();
+end.
