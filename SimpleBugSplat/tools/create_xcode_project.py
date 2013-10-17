@@ -1,13 +1,14 @@
 #!/usr/bin/python
 import os
 import sys
+import string
 
 # path to the script
 script_path        	= os.path.dirname(os.path.realpath(__file__)) + '/'
 # path to the project root
 project_path		= os.path.realpath(script_path + '..')
 # name of the app, based on root name
-app_name		   	= os.path.basename(project_path)
+app_name		   	= string.replace(os.path.basename(project_path), ' ', '_')
 
 if len(sys.argv) > 1:
     app_name = sys.argv[1]
