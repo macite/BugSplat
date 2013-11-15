@@ -1,0 +1,10 @@
+BITMAP,Buggy,buggy.png,114,86,3,5,15
+BITMAP,Background1,background1.png
+BITMAP,Background2,background2.png
+BITMAP,Background3,background3.png
+BITMAP,Background4,background4.png
+BITMAP,ScoreBackground,score.png
+FONT,ScoreFont,maven_pro_regular.ttf,32
+FONT,MessageFont,maven_pro_regular.ttf,64
+ANIM,BuggyAnimations,BuggyAnimations.txt
+SOUND,Hit,hit.wav

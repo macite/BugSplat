@@ -1,0 +1,26 @@
+{
+	"folders":
+	[
+		{
+			"path": ".",
+			"folder_exclude_patterns": ["bin", "build", "DerivedData", "tmp", "*.xcodeproj", "SimpleBugSplat", "lib", "tools"],
+			"file_exclude_patterns": ["*.sublime*", ".gitignore", "*DS_Store"]
+		}
+	],
+	"build_systems":
+    [
+        {
+            "name": "Bash",
+            "cmd": ["/bin/bash", "$file"],
+            "selector": "source.shell",
+
+            "windows": {
+				"path"	: "$path;c:\\mingw\\bin;c:\\mingw\\msys\\1.0\\bin;C:\\Apps\\MinGW\\bin;C:\\APPS\\MinGW\\msys\\1.0\\bin;C:\\apps\\FPC\\bin\\i386-win32",
+				"cmd"	: ["bash", "--login", "-i", "-c", "cd \"$file_path\"; \"$file\""]
+			},
+			"osx": {
+				"path"	: "$PATH:/usr/local/bin:/usr/X11R6/bin:/opt/X11/bin:/usr/texbin"
+			}
+        }
+    ]
+}
