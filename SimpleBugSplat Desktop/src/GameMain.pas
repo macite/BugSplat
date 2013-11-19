@@ -2,8 +2,6 @@ program GameMain;
 uses SwinGame, sgTypes, SysUtils;
 
 procedure Main();
-var
-  bug: Sprite;
 begin
   OpenAudio();
   
@@ -11,21 +9,11 @@ begin
   LoadDefaultColors();
   ShowSwinGameSplashScreen();
 
-  LoadResourceBundle('BugSplat.txt');
+  ClearScreen(ColorWhite);
+  DrawText('Hello World', ColorBlack, 'arial', 64, 370, 360);
+  RefreshScreen();
 
-  bug := CreateSprite('Buggy', 'BuggyAnimations');
-  SpriteSetPosition(bug, RandomScreenPoint());
-  SpriteMoveTo(bug, RandomScreenPoint(), 1 + Rnd(10));
-
-  repeat
-    ProcessEvents();
-    
-    DrawBitmap('Background1', 0, 0);
-    DrawAllSprites();
-    RefreshScreen(60);
-
-    UpdateAllSprites();
-  until WindowCloseRequested();
+  Delay(5000);
     
   CloseAudio();
   ReleaseAllResources();

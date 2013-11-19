@@ -519,6 +519,30 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "src/GameMain.pas",
+			"settings":
+			{
+				"buffer_size": 392,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "build.sh",
+			"settings":
+			{
+				"buffer_size": 12567,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "run.sh",
+			"settings":
+			{
+				"buffer_size": 1526,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -617,6 +641,12 @@
 	"file_history":
 	[
 		"/Users/acain/working/GitHub/BugSplat/SimpleBugSplat Desktop/BugSplat.sublime-project",
+		"/Users/acain/working/GitHub/BugSplat/SimpleBugSplat Desktop/build.sh",
+		"/Users/acain/working/GitHub/BugSplat/SimpleBugSplat Desktop/run.sh",
+		"/Users/acain/working/GitHub/BugSplat/SimpleBugSplat Desktop/src/GameMain.pas",
+		"/Users/acain/working/GitHub/BugSplat/SimpleBugSplat Desktop/clean.sh",
+		"/Users/acain/working/GitHub/BugSplat/SimpleBugSplat Desktop/lib/SwinGame.pas",
+		"/Users/acain/working/GitHub/BugSplat/SimpleBugSplat Desktop/lib/sgSprites.pas",
 		"/Users/acain/working/GitHub/BugSplat/SimpleBugSplat/BugSplat.sublime-project",
 		"/Users/acain/working/SwinGame/Dist/CPP/gpp/build.sh",
 		"/Users/acain/Desktop/testrec.c",
@@ -737,13 +767,7 @@
 		"/Users/acain/Downloads/HitList1.c",
 		"/Users/acain/working/Papers/Thesis/05-supporting.tex",
 		"/Users/acain/working/Papers/Thesis/06-Spiral.tex",
-		"/Users/acain/working/Papers/Thesis/Figures/Supporting/Lights.pas",
-		"/Users/acain/working/Papers/thesis/Figures/Supporting/Audio.pas",
-		"/Users/acain/working/Papers/Thesis/Figures/Supporting/HouseDrawing.pas",
-		"/Users/acain/working/Papers/Thesis/Figures/Supporting/KnockKnock.pas",
-		"/Users/acain/working/Papers/thesis/paramlist.tex",
-		"/Users/acain/working/Papers/thesis/syntax/eebnf.ebnf",
-		"/Users/acain/working/Papers/thesis/tikzdata.tex"
+		"/Users/acain/working/Papers/Thesis/Figures/Supporting/Lights.pas"
 	],
 	"find":
 	{
@@ -969,8 +993,99 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "src/GameMain.pas",
+					"settings":
+					{
+						"buffer_size": 392,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								392,
+								392
+							]
+						],
+						"settings":
+						{
+							"origPos": 0.0,
+							"syncScroll": false,
+							"syntax": "Packages/Pascal/Pascal.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "build.sh",
+					"settings":
+					{
+						"buffer_size": 12567,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								248,
+								248
+							]
+						],
+						"settings":
+						{
+							"origPos": 0.0,
+							"syncScroll": false,
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "run.sh",
+					"settings":
+					{
+						"buffer_size": 1526,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"origPos": 0.0,
+							"syncScroll": false,
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -1007,7 +1122,7 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 323.0
+		"height": 219.0
 	},
 	"replace":
 	{
@@ -1070,6 +1185,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 260.0,
+	"side_bar_width": 164.0,
 	"status_bar_visible": true
 }

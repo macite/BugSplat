@@ -49,10 +49,10 @@ begin
     DrawBitmap('Background1', 0, 0);
     DrawBitmap('ScoreBackground', 25, 25);
     DrawText('Score ' + IntToStr(score), ColorBlack, 'ScoreFont', 45, 45);
-    DrawSprite(bug);
+    DrawAllSprites();
     RefreshScreen(60);
 
-    UpdateSprite(bug);
+    UpdateAllSprites();
   until WindowCloseRequested();
     
   CloseAudio();

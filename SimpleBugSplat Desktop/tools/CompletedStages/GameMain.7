@@ -1,9 +1,9 @@
 program GameMain;
 uses SwinGame, sgTypes, SysUtils;
 
-procedure HandleSpriteEvent(bug: Sprite; event: String);
+procedure HandleSpriteEvent(bug: Sprite; event: SpriteEventKind);
 begin
-  if event = 'Arrived' then
+  if event = SpriteArrivedEvent then
   begin
     SpriteMoveTo(bug, RandomScreenPoint(), 1 + Rnd(10));
   end;
@@ -20,8 +20,9 @@ begin
   ShowSwinGameSplashScreen();
 
   LoadResourceBundle('BugSplat.txt');
+  CallOnSpriteEvent(@HandleSpriteEvent);
 
-  bug := CreateSprite('Buggy', 'BuggyAnimations', @HandleSpriteEvent);
+  bug := CreateSprite('Buggy', 'BuggyAnimations');
   SpriteSetPosition(bug, RandomScreenPoint());
   SpriteMoveTo(bug, RandomScreenPoint(), 1 + Rnd(10));
   SpriteStartAnimation(bug, 'fly');
@@ -30,10 +31,10 @@ begin
     ProcessEvents();
     
     DrawBitmap('Background1', 0, 0);
-    DrawSprite(bug);
+    DrawAllSprites();
     RefreshScreen(60);
 
-    UpdateSprite(bug);
+    UpdateAllSprites();
   until WindowCloseRequested();
     
   CloseAudio();
