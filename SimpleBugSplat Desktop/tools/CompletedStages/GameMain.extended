@@ -5,15 +5,10 @@ var score: Integer = 0;
 var level: Integer = 1;
 var bugsRemaining: Integer = 1;
 
-procedure ReleaseBug(bug: Sprite);
-begin
-  FreeSprite(bug);
-end;
-
-procedure ReviveSprite(bug: Sprite);
+procedure ReviveBug(bug: Sprite);
 begin
   SpriteSetPosition(bug, RandomScreenPoint());
-  SpriteMoveTo(bug, RandomScreenPoint(), 3 + Rnd(10));
+  SpriteMoveTo(bug, RandomScreenPoint(), 1 + Rnd(10));
   SpriteStartAnimation(bug, 'fly');
 end;
 
@@ -36,10 +31,10 @@ begin
 
     if bugsRemaining = 0 then
     begin
+      bug := CreateSprite('Buggy', 'BuggyAnimations');
       level +=  1;
       bugsRemaining := level;
-      bug := CreateSprite('Buggy', 'BuggyAnimations');
-      CallForAllSprites(@ReviveSprite);
+      CallForAllSprites(@ReviveBug);
       ResetTimer('CountDownTimer');
     end;
   end;
@@ -86,7 +81,6 @@ begin
     if TimerTicks('CountDownTimer') > 10000 then
     begin
       StopTimer('CountDownTimer');
-      //CallForAllSprites(@ReleaseBug);
       ReleaseAllSprites();
     end;
 
@@ -97,23 +91,14 @@ begin
 
       if KeyTyped( vk_Space ) then
       begin
-        StartTimer('CountDownTimer');
         bug := CreateSprite('Buggy', 'BuggyAnimations');
-        ReviveSprite(bug);
+        ReviveBug(bug);
+        level := 1;
+        bugsRemaining := 1;
+        score := 0;
+        StartTimer('CountDownTimer');
       end;
     end;
-
-
-    if TimerTicks('CountDownTimer') = 0 then
-    begin
-      // Draw game over message here
-
-      if KeyTyped( vk_Space ) then
-      begin
-        // Restart the game here
-      end;
-    end;
-
 
     RefreshScreen(60);
     UpdateAllSprites();
